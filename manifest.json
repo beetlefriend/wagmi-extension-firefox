@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Wagmi Extension for photon",
+  "version": "1.0",
+  "description": "Hides the sell button, via a toggle.",
+  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "green_candle.png",
+      "48": "green_candle.png",
+      "128": "green_candle.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://photon-sol.tinyastro.io/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
